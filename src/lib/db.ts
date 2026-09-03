@@ -26,7 +26,7 @@ export async function initializeDatabase() {
         ci VARCHAR(20) NOT NULL,
         nivel VARCHAR(100) NOT NULL,
         ultimo_curso VARCHAR(200),
-        tiempo_experiencia INT NOT NULL,
+        tiempo_experiencia VARCHAR(500) NOT NULL,
         club_entrena VARCHAR(200),
         telefono VARCHAR(14) NOT NULL,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,

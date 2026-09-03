@@ -11,7 +11,7 @@ export interface FormData {
   ci: string;
   nivel: string;
   ultimo_curso: string;
-  tiempo_experiencia: number;
+  tiempo_experiencia: string;
   club_entrena?: string;
   telefono: string;
 }

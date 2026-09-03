@@ -14,7 +14,7 @@ export default function FormPage() {
     ci: '',
     nivel: '',
     ultimo_curso: '',
-    tiempo_experiencia: 0,
+    tiempo_experiencia: '',
     club_entrena: '',
     telefono: '',
   });
@@ -51,8 +51,8 @@ export default function FormPage() {
         }
         break;
       case 'tiempo_experiencia':
-        if (value === undefined || value === null || (value as number) < 0) {
-          newErrors[name] = 'Años de experiencia requeridos';
+        if (!value || (value as string).trim().length < 5) {
+          newErrors[name] = 'Describe tu experiencia (mín. 5 caracteres)';
         } else {
           delete newErrors[name];
         }
@@ -81,7 +81,7 @@ export default function FormPage() {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
-    const parsedValue = name === 'tiempo_experiencia' ? parseInt(value) || 0 : value;
+    const parsedValue = name === 'tiempo_experiencia' ? value : (name === 'tiempo_experiencia' ? value : value); // keep as string
     const newData = { ...formData, [name]: parsedValue };
     setFormData(newData);
     validateField(name as keyof FormData, parsedValue);
@@ -147,7 +147,7 @@ export default function FormPage() {
           ci: '',
           nivel: '',
           ultimo_curso: '',
-          tiempo_experiencia: 0,
+          tiempo_experiencia: '',
           club_entrena: '',
           telefono: '',
         });
@@ -277,9 +277,10 @@ export default function FormPage() {
                 name="genero"
                 value={formData.genero}
                 onChange={handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
                 required
               >
+                <option value="" disabled>Seleccione género</option>
                 {generoOptions.map(opt => (
                   <option key={opt.value} value={opt.value}>{opt.label}</option>
                 ))}
@@ -301,18 +302,16 @@ export default function FormPage() {
               {errors.ci && <p className="mt-1 text-sm text-red-600">{errors.ci}</p>}
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Años de Experiencia *</label>
-              <input
-                type="number"
+              <label className="block text-sm font-medium text-gray-700 mb-1">Experiencia *</label>
+              <textarea
                 name="tiempo_experiencia"
                 value={formData.tiempo_experiencia}
                 onChange={handleChange}
-                min="0"
-                max="100"
+                rows={3}
                 className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder:text-gray-500 ${
                   errors.tiempo_experiencia ? 'border-red-500' : 'border-gray-300'
                 }`}
-                placeholder="5"
+                placeholder="Ej: 5 años dirigiendo categorías U15-U17, 3 años como asistente en Liga Superior, etc."
                 required
               />
               {errors.tiempo_experiencia && <p className="mt-1 text-sm text-red-600">{errors.tiempo_experiencia}</p>}
