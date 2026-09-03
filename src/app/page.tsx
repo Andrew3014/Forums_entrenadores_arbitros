@@ -229,7 +229,7 @@ export default function FormPage() {
                 name="nombres"
                 value={formData.nombres}
                 onChange={handleChange}
-                className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder:text-gray-500 ${
+                className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder:text-gray-500 text-gray-900 ${
                   errors.nombres ? 'border-red-500' : 'border-gray-300'
                 }`}
                 placeholder="Juan Carlos"
@@ -244,7 +244,7 @@ export default function FormPage() {
                 name="apellido_paterno"
                 value={formData.apellido_paterno}
                 onChange={handleChange}
-                className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder:text-gray-500 ${
+                className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder:text-gray-500 text-gray-900 ${
                   errors.apellido_paterno ? 'border-red-500' : 'border-gray-300'
                 }`}
                 placeholder="Pérez"
@@ -259,7 +259,7 @@ export default function FormPage() {
                 name="apellido_materno"
                 value={formData.apellido_materno}
                 onChange={handleChange}
-                className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder:text-gray-500 ${
+                className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder:text-gray-500 text-gray-900 ${
                   errors.apellido_materno ? 'border-red-500' : 'border-gray-300'
                 }`}
                 placeholder="García"
@@ -277,7 +277,7 @@ export default function FormPage() {
                 name="genero"
                 value={formData.genero}
                 onChange={handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900"
                 required
               >
                 <option value="" disabled>Seleccione género</option>
@@ -293,7 +293,7 @@ export default function FormPage() {
                 name="ci"
                 value={formData.ci}
                 onChange={handleChange}
-                className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder:text-gray-500 ${
+                className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder:text-gray-500 text-gray-900 ${
                   errors.ci ? 'border-red-500' : 'border-gray-300'
                 }`}
                 placeholder="1234567"
@@ -308,7 +308,7 @@ export default function FormPage() {
                 value={formData.tiempo_experiencia}
                 onChange={handleChange}
                 rows={3}
-                className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder:text-gray-500 ${
+                className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder:text-gray-500 text-gray-900 ${
                   errors.tiempo_experiencia ? 'border-red-500' : 'border-gray-300'
                 }`}
                 placeholder="Ej: 5 años dirigiendo categorías U15-U17, 3 años como asistente en Liga Superior, etc."
@@ -329,7 +329,7 @@ export default function FormPage() {
                 value={formData.nivel}
                 onChange={handleChange}
                 rows={3}
-                className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder:text-gray-500 ${
+                className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder:text-gray-500 text-gray-900 ${
                   errors.nivel ? 'border-red-500' : 'border-gray-300'
                 }`}
                 placeholder="Describe tu nivel, certificaciones, categorías dirigidas, etc."
@@ -344,7 +344,7 @@ export default function FormPage() {
                 name="ultimo_curso"
                 value={formData.ultimo_curso}
                 onChange={handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder:text-gray-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder:text-gray-500 text-gray-900"
                 placeholder="Ej: Curso FIBA Nivel 1 - 2023"
               />
             </div>
@@ -359,7 +359,7 @@ export default function FormPage() {
                 name="club_entrena"
                 value={formData.club_entrena}
                 onChange={handleChange}
-                className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder:text-gray-500 ${
+                className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder:text-gray-500 text-gray-900 ${
                   errors.club_entrena ? 'border-red-500' : 'border-gray-300'
                 }`}
                 placeholder="Ej: Club Universitario, Club San Simón, etc."
@@ -377,7 +377,7 @@ export default function FormPage() {
               name="telefono"
               value={formData.telefono}
               onChange={handleChange}
-              className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder:text-gray-500 ${
+              className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder:text-gray-500 text-gray-900 ${
                 errors.telefono ? 'border-red-500' : 'border-gray-300'
               }`}
               placeholder="Ej: 71234567 o 59171234567"
